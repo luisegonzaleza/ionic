@@ -1,0 +1,42 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>User</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content fullscreen>
+    <ion-button (click)="backButton()" fill="clear">
+      <ion-icon slot="icon-only" name="arrow-back-outline"></ion-icon>
+    </ion-button>
+    <ion-card>
+      <div class="center" *ngIf="user">
+        <ion-avatar>
+          <img [src]="user.avatar">
+        </ion-avatar>
+        <ion-card-header>
+          <ion-card-title>{{ user.first_name + ' ' + user.last_name}}</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut provident facere iure cumque laboriosam at, omnis et? Iure maiores reprehenderit aliquid fuga quod debitis illo voluptatibus cupiditate qui, nemo exercitationem.
+        </ion-card-content>
+      </div>
+    </ion-card>
+
+    <ion-card>
+      <ion-item href="#">
+        <ion-icon name="person-add-outline" slot="start"></ion-icon>
+        <ion-label>Add</ion-label>
+      </ion-item>
+
+      <ion-item href="#" class="ion-activated">
+        <ion-icon name="chatbubble-outline" slot="start"></ion-icon>
+        <ion-label>Chat</ion-label>
+      </ion-item>
+
+      <ion-item class="ion-activated">
+        <ion-icon name="warning" slot="start"></ion-icon>
+        <ion-label>Report</ion-label>
+      </ion-item>
+    </ion-card>
+</ion-content>
